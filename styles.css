@@ -1,0 +1,230 @@
+/* General body and HTML styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-padding-top: 60px; /* Offset for the fixed navbar */
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section styling */
+div {
+    min-height: 90vh; /* Each section takes up at least 90% of the viewport height */
+    padding: 5vh 20px; /* Padding to ensure content does not touch the edges */
+    margin-top: 60px; /* Give space for the fixed navbar */
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    box-sizing: border-box;
+}
+
+/* Home section specific styles */
+#home {
+    background: url('images/mountains.jpg') no-repeat center center fixed;
+    background-size: cover; /* Cover the entire section without repeating */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stacks children (h2, p) vertically */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Enhances text readability */
+}
+
+#home h2 {
+    font-family: "Pinyon Script";
+    font-size: 100px;
+    margin: 0.5em 0; /* Provides a small gap between h2 and p */
+}
+
+#home h2 {
+    color: #fff;
+}
+
+#home p {
+    color: wheat;
+    font-family: 'Shippori Mincho', serif; /* Specific font for the paragraph text */
+}
+
+/* Optionally, you can add specific styles for Japanese text */
+#home p:nth-of-type(1) { /* Assuming the Japanese text is the first paragraph */
+    font-family: 'Shippori Mincho', serif; /* A more suitable font for Japanese text */
+}
+
+/* about page */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Ensures the section covers the whole viewport height */
+    padding: 20px;
+    background: url('images/wild.jpg') no-repeat center center; /* Set your image path */
+    background-size: cover; /* Ensures the background covers the entire section */
+}
+
+#about h2 {
+    color: whitesmoke;
+    font-size: 45px;
+}
+
+.textbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust width as necessary */
+    gap: 20px; /* Spacing between boxes */
+}
+
+.textbox {
+    flex: 1; /* Ensures each box takes up equal space */
+    padding: 20px;
+    border: 1px solid #ccc; /* Style borders as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for better visibility */
+    min-width: 150px; /* Minimum width for each box */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for legibility */
+}
+
+.textbox h3 {
+    margin-top: 0;
+}
+
+.textbox p {
+    margin-bottom: 0;
+}
+
+/* projects page */
+#projects {
+    text-align: center;
+    position: relative;
+    background-color: snow;
+}
+
+.resume-link {
+    margin: 20px auto;
+    color: #333; /* Dark text color for contrast */
+    border-radius: 5px; /* Rounded corners for the link */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display: block; /* Makes each link take up the full width available */
+    background-color: whitesmoke; /* Light gray background, adjust color as needed */
+    color: #333; /* Dark text color for contrast */
+    padding: 10px 20px;
+    text-decoration: none; /* Removes the underline from the links */
+    width: 200px; /* Sets a fixed width for the rectangles */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a slight shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.resume-link:hover {
+    background-color: #eaeaea; /* Slightly changes color on hover for visual feedback */
+}
+
+#projects h2{
+    font-family: "bebas Neue";
+    font-size: 45px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Adjust the space between the images as necessary */
+}
+
+.circle-img {
+    width: 350px; /* Set the desired size */
+    height: 350px; /* Maintain the aspect ratio for a circle */
+    border-radius: 50%; /* This creates the circular shape */
+    object-fit: cover; /* Ensures the images cover the area properly */
+    transition: opacity 0.3s ease; /* Smooth transition for the opacity change */
+}
+
+.circle-img:hover {
+    opacity: 0.7; /* Image becomes slightly transparent on hover */
+}
+
+.raised {
+    margin-bottom: 150px; /* Raises the middle image */
+}
+
+/* contact page */
+#contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Adjust as needed for your layout */
+    padding: 20px;
+}
+
+#contact h2{
+    font-size: 45px;
+}
+
+.social-links {
+    margin-top: 50px;
+}
+
+.social-link {
+    display: block; /* Makes each link take up the full width available */
+    background-color: snow; /* Light gray background, adjust color as needed */
+    color: #333; /* Dark text color for contrast */
+    padding: 10px 20px;
+    margin: 20px 0; /* Adds space between the rectangles */
+    text-decoration: none; /* Removes the underline from the links */
+    width: 200px; /* Sets a fixed width for the rectangles */
+    border-radius: 5px; /* Optional: rounds the corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a slight shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-link:hover {
+    background-color: #ddd; /* Lightens the rectangle on hover */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
